@@ -68,6 +68,7 @@ EOF;
    */
   protected function execute($arguments = array(), $options = array())
   {
+    sfContext::createInstance($this->configuration);
     $databaseManager = new sfDatabaseManager($this->configuration);
 
     $config = $this->getCliConfig();
