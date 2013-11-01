@@ -261,6 +261,7 @@ class sfCoreAutoload
     'sfoutputescapersafe' => 'escaper/sfOutputEscaperSafe.class.php',
     'sfevent' => 'event_dispatcher/sfEvent.php',
     'sfeventdispatcher' => 'event_dispatcher/sfEventDispatcher.php',
+    'sfpatterneventdispatcher' => 'event_dispatcher/sfPatternEventDispatcher.php',
     'sfcacheexception' => 'exception/sfCacheException.class.php',
     'sfconfigurationexception' => 'exception/sfConfigurationException.class.php',
     'sfcontrollerexception' => 'exception/sfControllerException.class.php',

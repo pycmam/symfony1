@@ -46,7 +46,7 @@ class sfProjectConfiguration
 
     $this->rootDir = null === $rootDir ? self::guessRootDir() : realpath($rootDir);
     $this->symfonyLibDir = realpath(dirname(__FILE__).'/..');
-    $this->dispatcher = null === $dispatcher ? new sfEventDispatcher() : $dispatcher;
+    $this->dispatcher = null === $dispatcher ? new sfPatternEventDispatcher() : $dispatcher;
 
     ini_set('magic_quotes_runtime', 'off');
 
