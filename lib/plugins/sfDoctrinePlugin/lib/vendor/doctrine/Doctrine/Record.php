@@ -1922,7 +1922,9 @@ abstract class Doctrine_Record extends Doctrine_Record_Abstract implements Count
         if ($deep) {
             foreach ($this->_references as $key => $relation) {
                 if ( ! $relation instanceof Doctrine_Null) {
-                    $a[$key] = $relation->toArray($deep, $prefixKey);
+                    if (method_exists($relation, 'toArray')) {
+                        $a[$key] = $relation->toArray($deep, $prefixKey);
+                    }
                 }
             }
         }
